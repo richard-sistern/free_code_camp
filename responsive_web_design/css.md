@@ -87,7 +87,145 @@ Has property values for
 box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 ```
 
-Multiple, box-shadows can be used and are separated using commas
+Multiple, box-shadows can be used and are separated using commas.
+
+**Opacity**
+
+The `opacity` property is used to adjust the opacity, or conversely, the transparency of an item:
+
+- A value of 1 is opaque, which isn't transparent at all
+- A value of 0.5 is half see-through
+- A value of 0 is completely transparent
+
+The following transformations are available with `text-transform`:
+
+- lowercase
+- uppercase
+- capitalize
+- initial
+- inherit
+- none
+
+**Positioning**
+
+When a position is set to `relative`, you are specifying how CSS should move it *relative* to its current position in the normal flow of the page.  The movement is effectively the opposite direction to that specified.  To move something up by 10px:
+
+```css
+p {
+  position: relative;
+  bottom: 10px;
+}
+```
+
+When using `absolute` positioning, an element is locked in place relative to its parent container.  This puts the element outside of the normal document flow.
+
+This is similar to `fixed` positioning, which locks an element relative to the browser window.  The difference being, elements with a fixed position don't move when the user scrolls.
+
+Elements with a `float` property and removed from normal document flow and pushed to either the left of right of their containing parent element.
+
+```html
+<head>
+  <style>
+  #left {
+   float: left;
+   width: 50%;
+  }
+  #right {
+   float: right;
+   width: 40%;
+  }
+  aside, section {
+   padding: 2px;
+   background-color: #ccc;
+  }
+ </style>
+</head>
+<body>
+ <header>
+  <h1>Welcome!</h1>
+ </header>
+ <section id="left">
+  <h2>Content</h2>
+    <p>Good stuff</p>
+ </section>
+ <aside id="right">
+  <h2>Sidebar</h2>
+    <p>Links</p>
+ </aside>
+</body>
+```
+
+You can use `z-index` to change the order of overlapping elements.
+
+To centre a block element horizontally, you can set its `margin` to auto.
+
+```html
+<style>
+  div {
+    background-color: blue;
+    height: 100px;
+    width: 100px;
+    margin: auto;
+  }
+</style>
+<div></div>
+```
+
+**Hue, Saturation and Lightness (HSL)**
+
+```css
+hsl(240, 100%, 50%)
+```
+
+This is useful when adjusting a base colour slightly.
+
+**Linear Gradient**
+
+CSS can provide colour transitions, also known as gradients
+
+```css
+background: linear-gradient(gradient_direction, color 1, color 2, color 3, ...);
+
+background: linear-gradient(90deg, red, yellow, rgb(204, 204, 255));
+
+background: linear-gradient(35deg, #CCFFFF, #FFCCCC)
+```
+
+There is also a repeating variant
+
+```css
+background: repeating-linear-gradient(
+      45deg,
+      yellow 0px,
+      yellow 40px,
+      black 40px,
+      black 80px
+    );
+```
+
+Another option
+
+```css
+background: url("https://cdn-media-1.freecodecamp.org/imgr/MJAkxbh.png")
+```
+
+To change the scale (size) of an element
+
+```css
+p {
+  transform: scale(2);
+}
+```
+
+This can also be used to add interactivity or highlighting to an element
+
+```css
+p:hover {
+  transform: scale(2.1);
+}
+```
+
+
 
 ## Compatibility
 
