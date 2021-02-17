@@ -225,6 +225,13 @@ p:hover {
 }
 ```
 
+A transform can also skew
+
+```css
+transform: skewX(-24deg);
+transform: skewY(-10deg);
+```
+
 
 
 ## Compatibility
