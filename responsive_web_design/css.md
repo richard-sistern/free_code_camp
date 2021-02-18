@@ -265,3 +265,60 @@ img {
 ```
 
 The `max-width` of `100%` ensures the image is never wider than it's parent container.  The `height` of `auto` keeps the images original aspect ratio.
+
+## Flexbox
+
+```html
+<style>
+  #box-container {
+    height: 500px;
+    display: flex;
+  }
+
+  #box-1 {
+    background-color: dodgerblue;
+    width: 50%;
+    height: 50%;
+  }
+
+  #box-2 {
+    background-color: orangered;
+    width: 50%;
+    height: 50%;
+  }
+</style>
+<div id="box-container">
+  <div id="box-1"></div>
+  <div id="box-2"></div>
+</div>
+```
+
+Column
+
+```html
+<style>
+  #box-container {
+    display: flex;
+    height: 500px;
+    flex-direction: column;
+  }
+  #box-1 {
+    background-color: dodgerblue;
+    width: 50%;
+    height: 50%;
+  }
+
+  #box-2 {
+    background-color: orangered;
+    width: 50%;
+    height: 50%;
+  }
+</style>
+
+<div id="box-container">
+  <div id="box-1"></div>
+  <div id="box-2"></div>
+</div>
+```
+
+Can use `justify-content` to adjust flexbox behaviour.  The default alignment is `flex-start` and there are also `flex-end`, `space-between`, `space-around` and `space-evenly` options.
