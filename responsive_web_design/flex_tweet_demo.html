@@ -7,8 +7,9 @@
       body {
         font-family: Arial, sans-serif;
       }
-      header {
+      header, footer {
         display: flex;
+        flex-direction: row;
       }
       header .profile-thumbnail {
         width: 50px;
@@ -17,6 +18,7 @@
       }
       header .profile-name {
         display: flex;
+        flex-direction: column;
         margin-left: 10px;
       }
       header .follow-btn {
@@ -40,9 +42,6 @@
         margin: 20px 0;
         border-style: solid;
         opacity: 0.1;
-      }
-      footer {
-        display: flex;
       }
       footer .stats {
         display: flex;
