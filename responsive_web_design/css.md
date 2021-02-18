@@ -255,3 +255,13 @@ A media query can be used to change a variable
  }
 ```
 
+**Responsive Images**
+
+```css
+img {
+  max-width: 100%;
+  height: auto;
+}
+```
+
+The `max-width` of `100%` ensures the image is never wider than it's parent container.  The `height` of `auto` keeps the images original aspect ratio.
